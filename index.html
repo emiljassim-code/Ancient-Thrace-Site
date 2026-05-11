@@ -207,25 +207,160 @@ footer p{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.12em;t
 
 /* ── RESPONSIVE ── */
 @media(max-width:960px){
-  .wrap,.itin,.day-banner{padding-left:20px;padding-right:20px;}
-  .hdr{padding:11px 20px;}
-  .hdr nav{display:none;}
-  .hero{padding:48px 20px 40px;}
-  .col2,.col2w,.col2w.flip{grid-template-columns:1fr;}
-  .col2w.flip .prose,.col2w.flip .aside{order:unset;}
-  .dc{position:static;}
-  .arch-grid{grid-template-columns:1fr;}
-  .itin-inner{grid-template-columns:1fr;}
-  .tgrid{grid-template-columns:1fr;}
-  .tcard.full{grid-column:1;}
-  .srcg{grid-template-columns:1fr;}
-  .stat{padding:18px 22px 16px 0;margin-right:22px;}
-  .hero-stats{gap:0;}
-  footer{flex-direction:column;gap:11px;text-align:center;}
-  .map-tabs{flex-direction:column;}
-  .mbtn{border-right:none;border-bottom:1px solid var(--rule);}
-  .ctab{font-size:12px;}
-}
+
+  html, body{
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden;
+  }
+
+  .wrap,
+  .itin,
+  .day-banner,
+  .hero,
+  section,
+  footer{
+    padding-left:14px !important;
+    padding-right:14px !important;
+  }
+
+  .hdr{
+    padding:10px 14px;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:10px;
+  }
+
+  .hdr-brand{
+    white-space:normal;
+    line-height:1.5;
+  }
+
+  /* НАЙ-ВАЖНОТО - показва менюто */
+  .hdr nav{
+    display:flex !important;
+    flex-wrap:wrap;
+    gap:6px;
+    width:100%;
+  }
+
+  .hdr nav a{
+    border-left:none;
+    border:1px solid var(--rule);
+    padding:6px 8px;
+    font-size:8px;
+    line-height:1.3;
+  }
+
+  .hero{
+    padding-top:40px;
+    padding-bottom:36px;
+  }
+
+  .hero h1{
+    font-size:34px;
+    line-height:1.15;
+  }
+
+  .hero-lead{
+    font-size:16px;
+  }
+
+  .hero-stats{
+    flex-direction:column;
+  }
+
+  .stat{
+    width:100%;
+    border-right:none;
+    border-bottom:1px solid rgba(255,255,255,.1);
+    margin-right:0;
+    padding-right:0;
+  }
+
+  .stat:last-child{
+    border-bottom:none;
+  }
+
+  .col2,
+  .col2w,
+  .col2w.flip,
+  .srcg,
+  .arch-grid,
+  .tgrid,
+  .itin-inner{
+    grid-template-columns:1fr !important;
+  }
+
+  .col2w.flip .prose,
+  .col2w.flip .aside{
+    order:unset;
+  }
+
+  .dc{
+    position:static;
+    top:auto;
+  }
+
+  /* таблиците */
+  .ctab,
+  .otab{
+    display:block;
+    width:100%;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    font-size:12px;
+  }
+
+  .ctab th,
+  .ctab td,
+  .otab th,
+  .otab td{
+    white-space:normal;
+    min-width:120px;
+  }
+
+  /* картите */
+  .map-tabs{
+    flex-direction:column;
+  }
+
+  .mbtn{
+    border-right:none;
+    border-bottom:1px solid var(--rule);
+    padding:14px;
+  }
+
+  .mwrap{
+    max-height:none;
+  }
+
+  .mwrap img{
+    width:100%;
+    height:auto;
+  }
+
+  /* бутоните */
+  button,
+  .mbtn,
+  a{
+    max-width:100%;
+    word-break:break-word;
+  }
+
+  /* iframe safe */
+  img,
+  iframe{
+    max-width:100%;
+    height:auto;
+  }
+
+  footer{
+    flex-direction:column;
+    gap:10px;
+    text-align:center;
+  }
+  }
 </style>
 </head>
 <body>
